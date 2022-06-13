@@ -1,8 +1,6 @@
 {
   "short_name": "Portfolio",
   "name": "Zach Russell Portfolio",
-  "homepage": "https://zachrussell12.github.io/portfolio",
-  "private": true,
   "icons": [
     {
       "src": "favicon.ico",
@@ -23,13 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "scripts": {
-    "start": "react-scripts start",
-		"build": "react-scripts build",
-		"predeploy": "yarn run build",
-		"deploy": "gh-pages -d build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-  }
+  "background_color": "#ffffff"
 }
