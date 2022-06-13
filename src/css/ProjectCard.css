@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+.projContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 15vw;
+    height: 45vh;
+    overflow: hidden;
+    border-radius: 35px;
+    margin-inline: 25px;
+    cursor: pointer;
+}
+
+.projContainerMobile {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 90vw;
+    height: 75vh;
+    overflow: hidden;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-block: 25px;
+}
+
+.projImage {
+    object-fit: contain;
+    height: 50%;
+}
+
+.projInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60%;
+    width: 99%;
+    background-color: white;
+    box-shadow: 0px -1px 45px -15px black;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.projInfoMobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    height: 50%;
+    width: 99%;
+    background-color: white;
+    box-shadow: 0px -1px 45px -15px black;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.projInfo h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 0px;
+}
+
+.projInfo p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px 15px 15px 15px;
+}
