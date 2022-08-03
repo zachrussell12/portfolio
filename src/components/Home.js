@@ -75,21 +75,21 @@ function Home(){
             }
             {!isMobile && 
                 <motion.nav className="navigation">
-                <motion.a href="#about" animate={{opacity: [0, 1]}}>
-                    <motion.p whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4} }} animate={controlA} variants={navVar}>About</motion.p>
-                </motion.a>
-                <motion.a href="#education" animate={{opacity: [0, 1], transition: {delay: 0.2}}}>
-                    <motion.p whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlE} variants={navVar}>Education</motion.p>
-                </motion.a>
-                <motion.a href="#certifications" animate={{opacity: [0, 1], transition: {delay: 0.4}}}>
-                    <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlC} variants={navVar}>Certifications</motion.p>
-                </motion.a>
-                <motion.a href="#projects" animate={{opacity: [0, 1], transition: {delay: 0.6}}}>
-                    <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlP} variants={navVar}>Projects</motion.p>
-                </motion.a>
-                <motion.a animate={{opacity: [0, 1], transition: {delay: 0.6}}} onClick={()=>{document.location.href = "https://www.linkedin.com/in/zachary-russell-4979011b0/"}}>
-                    <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }}><BsLinkedin/></motion.p>
-                </motion.a>
+                    <motion.a href="#about" animate={{opacity: [0, 1]}}>
+                        <motion.p whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4} }} animate={controlA} variants={navVar}>About</motion.p>
+                    </motion.a>
+                    <motion.a href="#education" animate={{opacity: [0, 1], transition: {delay: 0.2}}}>
+                        <motion.p whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlE} variants={navVar}>Education</motion.p>
+                    </motion.a>
+                    <motion.a href="#certifications" animate={{opacity: [0, 1], transition: {delay: 0.4}}}>
+                        <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlC} variants={navVar}>Certifications</motion.p>
+                    </motion.a>
+                    <motion.a href="#projects" animate={{opacity: [0, 1], transition: {delay: 0.6}}}>
+                        <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }} animate={controlP} variants={navVar}>Projects</motion.p>
+                    </motion.a>
+                    <motion.a animate={{opacity: [0, 1], transition: {delay: 0.6}}} onClick={()=>{document.location.href = "https://www.linkedin.com/in/zachary-russell-4979011b0/"}}>
+                        <motion.p  whileHover={{color: ['hsl(4, 0, 100)', 'hsl(43, 100, 50)'], transition: {duration: 0.4}  }}><BsLinkedin/></motion.p>
+                    </motion.a>
                 </motion.nav>
             }
             {isMobile &&
@@ -104,7 +104,9 @@ function Home(){
         <div className={!isMobile ? "App-Main" : "Mobile-Main"}>
             <body>
             {isMobile && navBar &&
-                <CollapsibleNav navBar={navBar}/>
+                <div style={{backgroundColor: "#202124"}}>
+                    <CollapsibleNav navBar={navBar}/>
+                </div>
             }
             {!isMobile && <div id="landing">
                 <motion.img src={landingIMG} id="landingIMG" alt="Zach Russell looking up at Knightro" animate={{x: [ -450,-500], opacity: [0, 1], transition: {duration: 1}}}/>
@@ -151,7 +153,7 @@ function Home(){
                 </div>}
             </motion.div>
             <div id={!isMobile ? "education" : "educationMobile"}  style={{backgroundColor: isMobile ? '#202124' : null}}>
-                {!isMobile && <div id="about-right">
+                {!isMobile && <div id="about-right-ucf">
                     <img src={ucf} id='ucfLogo' alt='UCF Pegasus Logo'/>
                 </div>}
                 <div id={!isMobile ? "about-left" : "container-mobile"}>
@@ -176,39 +178,39 @@ function Home(){
                     </p>
                     </div>
                     <div>
-                    <h3 className="subHeader" style={{color: isMobile ? "white" : null}}>Related Coursework</h3>
-                    <ui className={!isMobile ? "twoColumnList" : "singleColumnList"}>
-                        <li>
-                        Computer Science I
-                        </li>
-                        <li>
-                        Security in Computing
-                        </li>
-                        <li>
-                        Object Oriented Programming
-                        </li>
-                        <li>
-                        Managing IT Integration
-                        </li>
-                        <li>
-                        Enterprise Computing
-                        </li>
-                        <li>
-                        Database Concepts
-                        </li>
-                        <li>
-                        Internet Applications
-                        </li>
-                        <li>
-                        Foundations of Discrete Math
-                        </li>
-                        <li>
-                        System Administration and Maintenance
-                        </li>
-                        <li>
-                        Foundations of Human & Computer Interaction
-                        </li>
-                    </ui>
+                        <h3 className="subHeader" style={{color: isMobile ? "white" : null}}>Related Coursework</h3>
+                        <ui className={!isMobile ? "twoColumnList" : "singleColumnList"}>
+                            <li>
+                            Computer Science I
+                            </li>
+                            <li>
+                            Security in Computing
+                            </li>
+                            <li>
+                            Object Oriented Programming
+                            </li>
+                            <li>
+                            Managing IT Integration
+                            </li>
+                            <li>
+                            Enterprise Computing
+                            </li>
+                            <li>
+                            Database Concepts
+                            </li>
+                            <li>
+                            Internet Applications
+                            </li>
+                            <li>
+                            Foundations of Discrete Math
+                            </li>
+                            <li>
+                            System Administration and Maintenance
+                            </li>
+                            <li>
+                            Foundations of Human & Computer Interaction
+                            </li>
+                        </ui>
                     </div>
                 </div>
             </div>
@@ -216,30 +218,34 @@ function Home(){
                 <div className={!isMobile ? "fullWidth" : "fullWidthMobile"}>
                     <h5 ref={refC} id={isMobile ? "mobile-h5" : null}>Certifications</h5>
                     <div className={!isMobile ? "fullWidthBody" : "fullWidthBodyMobile"}>
-                    <CertCard cert={'Responsive Web Design Developer Certification'} img={'https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png'} certLink={'https://www.freecodecamp.org/certification/zachrussell/responsive-web-design'} mobile={isMobile}/>
-                    <CertCard cert={'TestOut IT Fundamentals Pro Certification'} img={'0'} certLink={'https://verification.testout.com/verifycert/6-1C6-74E9V'} mobile={isMobile}/>
+                        <div id={!isMobile ? "allCerts-container" : null}>
+                            <CertCard cert={'Responsive Web Design Developer Certification'} img={'https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png'} certLink={'https://www.freecodecamp.org/certification/zachrussell/responsive-web-design'} mobile={isMobile}/>
+                            <CertCard cert={'JavaScript Algorithms and Data Structures Certification'} img={'https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png'} certLink={'https://freecodecamp.org/certification/zachrussell/javascript-algorithms-and-data-structures'} mobile={isMobile}/>
+                            <CertCard cert={'Front End Development Libraries'} img={'https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png'} certLink={'https://www.freecodecamp.org/certification/zachrussell/front-end-development-libraries'} mobile={isMobile}/>
+                            <CertCard cert={'TestOut IT Fundamentals Pro Certification'} img={'0'} certLink={'https://verification.testout.com/verifycert/6-1C6-74E9V'} mobile={isMobile}/>
+                        </div>
                         <motion.button id={!isMobile ? "skillAssessContainer" : "skillAssessMobile"} whileHover={{scale: 1.05, transition: {duration: 0.3, ease: 'easeInOut'}}} onClick={()=>{document.location.href="https://www.linkedin.com/in/zachary-russell-4979011b0/#skills";}}>
-                        <h3 className="subHeader" style={{color: 'white'}}>LinkedIn Skill <span style={{color: '#FFB600'}}>Assessments</span></h3>
-                        <ui id="skillList">
-                            <li>
-                            IT Operations
-                            </li>
-                            <li>
-                            Front-End Development
-                            </li>
-                            <li>
-                            JavaScript
-                            </li>
-                            <li>
-                            HTML
-                            </li>
-                            <li>
-                            CSS
-                            </li>
-                            <li>
-                            Adobe Premiere Pro
-                            </li>
-                        </ui>
+                            <h3 className="subHeader" style={{color: 'white'}}>LinkedIn Skill <span style={{color: '#FFB600'}}>Assessments</span></h3>
+                            <ui id="skillList">
+                                <li>
+                                IT Operations
+                                </li>
+                                <li>
+                                Front-End Development
+                                </li>
+                                <li>
+                                JavaScript
+                                </li>
+                                <li>
+                                HTML
+                                </li>
+                                <li>
+                                CSS
+                                </li>
+                                <li>
+                                Adobe Premiere Pro
+                                </li>
+                            </ui>
                         </motion.button>
                     </div>
                 </div>

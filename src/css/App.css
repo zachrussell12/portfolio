@@ -22,6 +22,7 @@
   font-size: calc(10px + 2vmin);
   color: #E1E2E2;
   z-index: 5;
+  padding-inline: 15px;
 }
 
 .Mobile-header {
@@ -42,6 +43,7 @@
 .navigation {
   text-align: center;
   color: #E1E2E2;
+  margin-inline: 15px;
 }
 
 #burgMenu {
@@ -81,8 +83,7 @@ h5 {
 
 #headIMG {
   width: 14vw;
-  aspect-ratio: 0.65;
-  transform: translate(-3.75vw, -8vh);
+  padding-top: 30%;
 }
 
 #contact-info {
@@ -104,6 +105,10 @@ h5 {
 }
 
 .image-cropper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 7vw;
   height: 7vw;
   position: relative;
@@ -160,16 +165,20 @@ h5 {
 }
 
 .image-cropper-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 25vw;
   height: 25vw;
   position: relative;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 #headIMGMobile {
-  width: 55vw;
-  aspect-ratio: 0.65;
-  transform: translate(-15.75vw, -10vh);
+  width: 45vw;
+  padding-top: 25%;
 }
 
 #mobileLandingsubheader {
@@ -243,9 +252,16 @@ h5 {
   font-size: 0.8vw;
 }
 
-#about-right {
+#about-right, #about-right-ucf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   min-width: 40vw;
   background-color: #202124;
+}
+
+#about-right-ucf{
+  justify-content: center;
 }
 
 #skillsBox {
@@ -257,11 +273,10 @@ h5 {
 }
 
 #ucfLogo {
-  max-height: 30vh;
+  max-height: 40vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15vh;
 }
 
 .degreeContainer {
@@ -273,9 +288,13 @@ h5 {
 .twoColumnList {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 3;
   flex-wrap: wrap;
-  max-height: 10vh;
+  max-height: 13vh;
+}
+
+.twoColumnList li{
+  margin-inline-start: 10px;
 }
 
 .singleColumnList {
@@ -292,7 +311,9 @@ h5 {
 }
 
 .fullWidth {
+  flex-wrap: wrap;
   min-width: 80vw;
+  max-width: 80vw;
   background-color: white;
   padding: 50px 75px 100px 50px;
   align-content: center;
@@ -313,8 +334,11 @@ h5 {
   display: flex;
   flex-direction: row;
   flex: 1;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  width: 90%;
+  height: fit-content;
 }
 
 .fullWidthBodyMobile {
@@ -334,6 +358,15 @@ h5 {
   text-align: left;
 }
 
+#allCerts-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 2;
+  max-height: 60vh;
+  min-width: 10vw;
+}
+
 #skillAssessContainer {
   display: flex;
   flex-direction: column;
@@ -341,7 +374,7 @@ h5 {
   background-color: #202124;
   border-radius: 35px;
   min-width: 14vw;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 #skillAssessMobile{

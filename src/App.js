@@ -16,7 +16,7 @@ function App() {
   return (
     <Router className="appBody">
       <Routes>
-        <Route exact path ='/' element={<Home/>}/>
+        <Route exact path ='/portfolio' element={<Home/>}/>
         <Route path="mindful" element={<MindfulFocus mobile={isMobile}/>}/>
         <Route path="discord" element={<DiscordFocus mobile={isMobile}/>}/>
       </Routes>

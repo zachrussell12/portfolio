@@ -3,15 +3,18 @@
 .projContainer {
     display: flex;
     flex-direction: column;
+    flex: 1;
     align-content: center;
     align-items: center;
     justify-content: center;
     background-color: white;
-    width: 15vw;
-    height: 45vh;
+    min-width: 15vw;
+    max-width: 350px;
+    height: 55vh;
     overflow: hidden;
     border-radius: 35px;
     margin-inline: 25px;
+    margin-block: 25px;
     cursor: pointer;
 }
 
@@ -38,9 +41,10 @@
 .projInfo {
     display: flex;
     flex-direction: column;
+    flex: 1;
     flex-wrap: wrap;
     height: 60%;
-    width: 99%;
+    width: 100%;
     background-color: white;
     box-shadow: 0px -1px 45px -15px black;
     justify-content: flex-start;
@@ -75,5 +79,5 @@
     font-weight: 300;
     font-size: 18px;
     text-align: justify;
-    padding: 0px 15px 15px 15px;
+    padding: 0px 15px 25px 15px;
 }
