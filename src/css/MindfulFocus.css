@@ -6,50 +6,10 @@
     flex-wrap: nowrap;
     background-color: #202124;
     width: 100%;
-    overflow-x: hidden;
-}
-  
-.sidebar {
-    background-color: #202124;
-    min-height: 100vh;
-    min-width: 20vw;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
-    z-index: 5;
-}
-
-.mobilebar {
-    background-color: #202124;
-    min-height: 8vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #E1E2E2;
-    z-index: 5;
-}
-
-.mobile-nav {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    max-height: 25vh;
 }
 
 .mobileMain {
-    background-color: white;
+    background-color: #242323;
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -75,7 +35,7 @@
 }
 
 .sidebar-title-mobile {
-    color: white;
+    color: #242323;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 7vw;
@@ -84,7 +44,7 @@
 }
 
 .main{
-    background-color: #E1E2E2;
+    background-color: #242323;
     min-height: 100vh;
     min-width: 80vw;
     display: flex;
@@ -105,10 +65,21 @@
 .sectionContainer {
     box-sizing: border-box;
     padding: 0px 2% 0px 2%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .mobileContainer {
-    background-color: white;
+    background-color: #242323;
+     display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
 }
 
 .sectionHeader {
@@ -117,7 +88,7 @@
     font-size: 1.75vw;
     margin-bottom: 0px;
     margin-block-start: 2%;
-    color: #8B3DD9
+    color: #FFFFFF
 }
 
 .mobileH5 {
@@ -127,7 +98,7 @@
     margin-bottom: 0px;
     margin-inline-start: 4%;
     margin-block-start: 5%;
-    color: #8B3DD9
+    color: #FFFFFF
 }
 
 #overview-container {
@@ -137,10 +108,15 @@
     margin-inline: 25px;
 }
 
+#overview-container p, h5 {
+    color: #FFFFFF;
+}
+
 .sectionSubHeader {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.25vw;
+    color: #ff5164;
 }
 
 .mobileH3 {
@@ -161,6 +137,7 @@
     font-weight: 300;
     font-size: 4.5vw;
     text-align: justify;
+    color:#242323;
 }
 
 #features-carousel {
