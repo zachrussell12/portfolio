@@ -1,12 +1,11 @@
 import React from 'react';
 
 //Libraries
-import {motion, useAnimation} from 'framer-motion'
+import {motion} from 'framer-motion'
 import {projInfo} from '../data/projectinformation.js';
-import {useInView} from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import {useMediaQuery} from 'react-responsive';
-import { TypeAnimation }  from 'react-type-animation';
+import {TypeAnimation }  from 'react-type-animation';
 import axios from 'axios';
 
 //Icons
@@ -20,13 +19,9 @@ import '../css/App.css';
 //Images
 import headshot from '../images/headshot.png';
 import hills from '../images/hills.png';
-import mindfulCirc from '../images/mindfulCirc.png';
 
 //Components
-import CertCard from './CertCard';
 import ProjectCard from './ProjectCard';
-import CollapsibleNav from './CollapsibleNav.js';
-import { Link } from 'react-router-dom';
 import MindfulPop from './MindfulPop.js';
 import DiscordPop from './DiscordPop.js';
 
@@ -128,13 +123,16 @@ function Home(){
                             <p style={{paddingInlineEnd: 25}}>
                                 Zachary David Russell
                             </p> 
-                            <motion.a href="mailto:zachrussell12@gmail.com" id="email-text" animate={{opacity: [0, 1], transition: {delay: 0.6}}} whileHover={{y: [0, -5], transition: {duration: 0.5}}} style={{color: window.scrollY == 0 ? '#FFFFFF' : '#ff5164', marginTop: ninetyHeightBreak ? -5 : eightyBreak ? -2 : 5, paddingInlineEnd: 25}}>
+                            <motion.a href="mailto:zachrussell12@gmail.com" id="email-text" animate={{opacity: [0, 1], transition: {delay: 0.6}}} whileHover={{y: [0, -5], transition: {duration: 0.5}}} style={{color: window.scrollY === 0 ? '#FFFFFF' : '#ff5164', marginTop: ninetyHeightBreak ? -5 : eightyBreak ? -2 : 5, paddingInlineEnd: 25}}>
                                 <motion.p>
                                     <BiMailSend id="mailIcon" size={thousandBreak ? 25 : 20}/>
                                 </motion.p>
                             </motion.a>
-                            <motion.a animate={{opacity: [0, 1], transition: {delay: 0.6}}} style={{color: window.scrollY == 0 ? '#FFFFFF' : '#ff5164', marginTop: ninetyHeightBreak ? -1 : eightyBreak ? 0 : 5, cursor: 'pointer'}} onClick={()=>{document.location.href = "https://www.linkedin.com/in/zachary-russell-4979011b0/"}}>
-                                <motion.p  whileHover={{y: [0, -5], transition: {duration: 0.4}  }} style={{color: window.scrollY == 0 ? '#FFFFFF' : '#ff5164',}}><BsLinkedin/></motion.p>
+                            <motion.a animate={{opacity: [0, 1], transition: {delay: 0.6}}} style={{color: window.scrollY === 0 ? '#FFFFFF' : '#ff5164', marginTop: ninetyHeightBreak ? -1 : eightyBreak ? 0 : 5, cursor: 'pointer', paddingInlineEnd: 25}} onClick={()=>{document.location.href = "https://www.linkedin.com/in/zachary-russell-4979011b0/"}}>
+                                <motion.p  whileHover={{y: [0, -5], transition: {duration: 0.4}  }} style={{color: window.scrollY === 0 ? '#FFFFFF' : '#ff5164',}}><BsLinkedin/></motion.p>
+                            </motion.a>
+                            <motion.a animate={{opacity: [0, 1], transition: {delay: 0.6}}} style={{color: window.scrollY === 0 ? '#FFFFFF' : '#ff5164', marginTop: ninetyHeightBreak ? -1 : eightyBreak ? 0 : 5, cursor: 'pointer'}} onClick={()=>{document.location.href = "https://github.com/zachrussell12"}}>
+                                <motion.p  whileHover={{y: [0, -5], transition: {duration: 0.4}  }} style={{color: window.scrollY === 0 ? '#FFFFFF' : '#ff5164',}}><BsGithub/></motion.p>
                             </motion.a>
                         </nav>
                     }
@@ -177,8 +175,8 @@ function Home(){
                             style={{ fontSize: ninetyBreak ? '6.5vh' : eightyBreak ? '5vh' : '6.5vh', color: '#FFFFFF', fontFamily: 'monospace', paddingBlock: 50,}}/>
                         </span>
                         <p className='dash-blink' style={{ fontSize: '6.5vh', color: '#FFFFFF', fontFamily: 'monospace', position: 'relative', left: '2%'}}>_</p>
-                        <img src={headshot} style={{position: 'absolute', zIndex: 0, width: '5%', left: '1.5%'}}/>
-                        <img style={{position: 'absolute', zIndex: 0, width: '100%', height: undefined, aspectRatio: 1, top: eightyBreak ? '-5%' :  ninetyHeightBreak ? '-16.5%' : '-23.5%', left: 0}} src={hills}/>
+                        <img src={headshot} style={{position: 'absolute', zIndex: 0, width: '5%', left: '1.5%'}} alt="Zachary Russell standing in front of the UCF Library"/>
+                        <img style={{position: 'absolute', zIndex: 0, width: '100%', height: undefined, aspectRatio: 1, top: eightyBreak ? '-5%' :  ninetyHeightBreak ? '-16.5%' : '-23.5%', left: 0}} src={hills} alt="Curvy shape meant to look like a curvy transition into the body of the website."/>
                     </div>
                 
                 }
@@ -435,12 +433,12 @@ function Home(){
                                             {
                                                 certs.map((data, i)=>{
                                                     return(
-                                                        <a href={`${data.link}`} target="_blank" style={{paddingLeft: i == 0 ? 45 : 23}}>
+                                                        <a href={`${data.link}`} target="_blank" rel="noreferrer" style={{paddingLeft: i === 0 ? 45 : 23}}>
                                                             <TypeAnimation
                                                             sequence={[
-                                                                i == certs.length-1 ? `certName: ${data.title}`  : `certName: ${data.title},`, 
+                                                                i === certs.length-1 ? `certName: ${data.title}`  : `certName: ${data.title},`, 
                                                                 2000, 
-                                                                ()=>{ i == certs.length-1 ? setCodeFourthType(true) : console.log('');}
+                                                                ()=>{ i === certs.length-1 ? setCodeFourthType(true) : console.log('');}
                                                                 ]}
                                                                 wrapper="a"
                                                                 cursor={false}
@@ -476,7 +474,7 @@ function Home(){
                                     {codeFifthType && 
                                         <span>
                                         {'>'}
-                                        <a href="https://www.linkedin.com/in/zachary-russell-4979011b0/#skills" style={{cursor: 'pointer'}} target="_blank">
+                                        <a href="https://www.linkedin.com/in/zachary-russell-4979011b0/#skills" style={{cursor: 'pointer'}} target="_blank" rel="noreferrer">
                                             <TypeAnimation
                                                     sequence={[
                                                     `let experience = [${assessments.join(', ')}]`, 
